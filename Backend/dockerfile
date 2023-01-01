@@ -1,0 +1,12 @@
+FROM python:3.10-alpine
+COPY . .
+
+WORKDIR /server
+RUN pip3 install -r requirements.txt
+RUN pip install flask
+RUN pip install flask-cors
+RUN pip install waitress
+
+EXPOSE 5000
+
+CMD [ "python",'main.py' ]
