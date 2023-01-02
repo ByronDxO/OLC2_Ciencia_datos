@@ -1,0 +1,61 @@
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.input-field label {
+  color: #ba68c8;
+}
+/* label focus color */
+.input-field input:focus + label {
+  color: #ba68c8 !important;
+}
+/* label underline focus color */
+.row .input-field input:focus {
+  border-bottom: 1px solid #ba68c8 !important;
+  box-shadow: 0 1px 0 0 #ba68c8 !important
+}
+
+.tabs .tab a{
+  color:#000;
+} /*Black color to the text*/
+
+.tabs .tab a:hover {
+  background-color:#b388ff;
+  color:#000;
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+  background-color:#ba68c8;
+  color:#000;
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+  background-color:#ba68c8;
+} /*Color of underline*/
+
+.progress {
+  background-color: white;
+}
+
+.progress .force {
+  background-color: purple;
+}
+
+.progress .speed {
+  background-color: blue;
+}
+
+.progress .ritm {
+  background-color: red;
+}

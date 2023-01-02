@@ -1,0 +1,29 @@
+{
+  "short_name": "BoxSmart",
+  "name": "BoxSmart App",
+  "icons": [
+    {
+      "src": "icons/64.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/196.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#6a1b9a",
+  "categories": ["fitness", "health", "lifestyle", "sports"],
+  "description": "PWA de BoxSmart para ACYE2",
+  "dir": "ltr",
+  "display_override": ["fullscreen", "minimal-ui"]
+}

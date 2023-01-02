@@ -58,7 +58,3 @@ def prediction():
     print(accuracy_score(y_expect, y_pred))
 
 
-data = pd.read_csv('salarios.csv')
-lineal('Level','Salary',data)
-data = pd.read_csv('salarios2.csv')
-polinomial('Level','Salary',data, 3)
