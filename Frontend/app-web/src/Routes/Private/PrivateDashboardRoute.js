@@ -8,7 +8,7 @@ const PrivateDashboardRoute = (props) => {
     const {isAuthenticated} = useAuthContext();
 
 
-    if(!isAuthenticated){
+    if(isAuthenticated){
         return <Navigate to="/" />
     }
 

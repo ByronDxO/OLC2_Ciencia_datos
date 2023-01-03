@@ -47,8 +47,8 @@ const Navbar = ({ name = undefined, setName = undefined }) => {
             <div>
                 <ul className="right hide-on-med-and-down">
                     <li><a className="waves-effect waves-light btn modal-trigger"
-                           href="#modal1"
-                           onClick={ () => setTypeForm("login")}
+                           href="/dashboard"
+                           
                         >
                         Regresion Lineal
                         

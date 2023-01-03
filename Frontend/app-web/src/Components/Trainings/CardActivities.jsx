@@ -1,3 +1,5 @@
+import M from '@materializecss/materialize/dist/js/materialize.min';
+import {useEffect, useState} from "react";
 const CardActivities = ({ title, unit, typeClass, progress, retro }) => {
 
     return (

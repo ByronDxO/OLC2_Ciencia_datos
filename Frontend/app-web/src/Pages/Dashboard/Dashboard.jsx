@@ -1,21 +1,21 @@
 import {useEffect} from "react";
 import Tabs from "../../Components/Dashboard/Tabs";
-
+import Navigation from "../../Components/regresiones/navegacion"
 
 const Dashboard = ({ setArrayNames }) => {
 
     useEffect(() => {
         let initialObjects = [
             { link: "/", name: "inicio" },
-            { link: "/dashboard", name: "Dashboard" }
+            { link: "/dashboard", name: "Regresion Lineal" }
         ];
         setArrayNames(initialObjects);
     }, []);
 
     return (
         <div className="container">
-            <h5>Graficos</h5>
-            <Tabs />
+            
+            <Navigation/>
         </div>
     );
 }
