@@ -1,11 +1,18 @@
-FROM python:3.10-alpine
-COPY . .
+FROM python:3.10.8
 
-WORKDIR /server
-RUN pip3 install -r requirements.txt
+WORKDIR /Backend
+RUN pip install --upgrade pip
 RUN pip install flask
-RUN pip install flask-cors
-RUN pip install waitress
+RUN pip install flask_cors
+RUN pip install streamlit
+RUN pip install matplotlib
+RUN pip install numpy
+RUN pip install sklearn
+RUN pip install scikit-learn
+RUN pip install werkzeug
+RUN pip install pandas
+
+COPY . .
 
 EXPOSE 5000
 

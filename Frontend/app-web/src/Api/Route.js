@@ -14,7 +14,12 @@ const url_getVelocity = url_api + "/graficaVelocidad";
 const url_getReporte1 = url_api + "/reportenumEntrenamiento";
 const url_getReporte2 = url_api + "/reportenumEntrenamientoTipo";
 const url_getReporte3 = url_api + "/reportenduracionEntrenamiento";
-
+/* get files */ 
+const url_putFile = url_api +"/file"
+const url_graficarlineal = url_api+"/generar_lineal"
+const url_graficarpoli = url_api+"/generar_pol"
+const url_arbol = url_api+"/generar_arbol"
+const url_gaus = url_api+"/gaus"
 /* USER */
 export async function getUser(){
     return fetch(url_getUser, {
@@ -151,6 +156,90 @@ export async function getReporte3(id){ /* Rate */
         },
         body: JSON.stringify({
             idUsuario:id
+        }),
+    });
+}
+
+export async function postfile(data){
+
+    return fetch(url_putFile, {
+        method: 'POST',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            file : data 
+        }),
+    });
+}
+
+export async function generarLineal(data,file,predicciones){
+
+    return fetch(url_graficarlineal, {
+        method: 'POST',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            nombre: data,
+            variable: file,
+            prediccion: predicciones
+            
+        }),
+    });
+}
+
+export async function generarpoli(data,file,predicciones,grado){
+
+    return fetch(url_graficarpoli, {
+        method: 'POST',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            nombre: data,
+            variable: file,
+            prediccion: predicciones,
+            grado: grado
+            
+        }),
+    });
+}
+
+export async function generaroArbol(data,file){
+
+    return fetch(url_arbol, {
+        method: 'POST',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            nombre: data,
+            variable: file
+            
+            
+        }),
+    });
+}
+
+export async function gaus(data,file,gaus){
+
+    return fetch(url_gaus, {
+        method: 'POST',
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            nombre: data,
+            variable: file,
+            nombreG : gaus
+            
+            
         }),
     });
 }
